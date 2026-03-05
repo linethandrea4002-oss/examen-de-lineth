@@ -1,0 +1,74 @@
+<!-- pagina2.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página 2</title>
+    <style>
+        * { font-family: Arial; margin: 0; padding: 0; }
+        body { padding: 20px; background: #f0f0f0; }
+        nav { background: #333; padding: 15px; margin-bottom: 20px; }
+        nav a { color: white; text-decoration: none; margin: 0 10px; }
+        nav a:hover { color: #4ecdc4; }
+        .active { color: #4ecdc4 !important; font-weight: bold; }
+        h1 { color: #333; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="active">Inicio</a>
+        <a href="pagina1.html">pagina1</a>
+        <a href="pagina2.html">Página2</a>
+        <a href="pagina3.html">Página3</a>
+        <a href="pagina4.html">Página4</a>
+        <a href="pagina5.html">pagina5</a>
+        <a href="pagina6.html">Página6</a>
+        <a href="pagina7.html">Página7</a>
+        <a href="pagina8.html">Página8</a>
+    </nav>
+   
+    <p>Contenido de la página 2.</p>
+</body>
+</html>
+<head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="pagina2">
+
+    </head>
+<body>
+    
+    <a href="index.html">← Volver al menú</a>
+</body>
+</html>
+
+
+
+<style>
+        * { margin: 0; padding: 0; font-family: Arial; }
+        body { padding: 20px; background: #3498db; color: white; min-height: 100vh; }
+        a { color: white; display: block; margin-bottom: 20px; }
+        input { display: block; margin: 10px 0; }
+        #vista { margin-top: 20px; width: 100%; height: 500px; }
+    </style>
+</head>
+<body>
+    
+    
+    <input type="date" id="fecha">
+    <input type="file" id="pdf" accept=".pdf" onchange="verPDF(this)">
+    
+    <iframe id="vista"></iframe>
+
+    <script>
+        function verPDF(input) {
+            const file = input.files[0];
+            if (file) {
+                document.getElementById('vista').src = URL.createObjectURL(file);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!-- pagina7.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página 7</title>
+    <style>
+        * { font-family: Arial; margin: 0; padding: 0; }
+        body { padding: 20px; background: #f0f0f0; }
+        nav { background: #333; padding: 15px; margin-bottom: 20px; }
+        nav a { color: white; text-decoration: none; margin: 0 10px; }
+        nav a:hover { color: #ffaaa5; }
+        .active { color: #ffaaa5 !important; font-weight: bold; }
+        h1 { color: #333; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="active">Inicio</a>
+        <a href="pagina1.html">pagina1</a>
+        <a href="pagina2.html">Página2</a>
+        <a href="pagina3.html">Página3</a>
+        <a href="pagina4.html">Página4</a>
+        <a href="pagina5.html">pagina5</a>
+        <a href="pagina6.html">Página6</a>
+        <a href="pagina7.html">Página7</a>
+        <a href="pagina8.html">Página8</a>
+    </nav>
+    <h1>Página 7</h1>
+    <p>Contenido de la página 7.</p>
+</body>
+</html>
+<head>
+    <meta charset="UTF-8">
+    <title>Página 7</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="pagina7">
+
+    </head>
+<body>
+    <h1>Página 7</h1>
+    <a href="index.html">← Volver al menú</a>
+</body>
+</html>
+
+
+<style>
+        * { margin: 0; padding: 0; font-family: Arial; }
+        body { padding: 20px; background: #e91e63; color: white; min-height: 100vh; }
+        a { color: white; display: block; margin-bottom: 20px; }
+        input { width: 300px; }
+        li { background: rgba(255,255,255,0.2); margin: 5px 0; padding: 10px; list-style: none; }
+        .oculto { display: none; }
+    </style>
+</head>
+<body>
+   
+    <h1>Tienda</h1>
+    
+    <p>Max: $<span id="val">100</span></p>
+    <input type="range" id="rango" min="0" max="100" value="100" oninput="filtrar()">
+    
+    <ul id="lista"></ul>
+
+    <script>
+        const productos = [
+            "Manzana $5","Pera $8","Plátano $6","Naranja $7","Uva $12","Fresa $15","Mango $20","Piña $25","Sandía $18","Melón $22",
+            "Zanahoria $3","Tomate $4","Cebolla $2","Papa $5","Lechuga $6","Pepino $4","Calabacín $7","Pimiento $8","Berenjena $9","Brócoli $10",
+            "Pollo $30","Res $45","Cerdo $35","Pescado $40","Camarón $50","Atún $55","Salmón $60","Trucha $48","Langosta $80","Pulpo $65",
+            "Leche $10","Queso $25","Yogur $12","Mantequilla $15","Crema $18","Huevo $20","Pan $8","Galleta $10","Pastel $35","Helado $22",
+            "Arroz $12","Frijol $15","Lenteja $14","Garbanzo $16","Avena $18","Harina $10","Azúcar $13","Sal $5","Aceite $28","Vinagre $15",
+            "Café $35","Té $20","Jugo $18","Refresco $16","Agua $10"
+        ];
+        
+        const lista = document.getElementById('lista');
+        
+        productos.forEach(p => {
+            const li = document.createElement('li');
+            li.textContent = p;
+            li.dataset.precio = p.match(/\d+/)[0];
+            lista.appendChild(li);
+        });
+        
+        function filtrar() {
+            const max = document.getElementById('rango').value;
+            document.getElementById('val').textContent = max;
+            document.querySelectorAll('li').forEach(li => {
+                li.className = +li.dataset.precio > max ? 'oculto' : '';
+            });
+        }
+    </script>
+</body>
+</html>

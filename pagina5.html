@@ -1,0 +1,97 @@
+<!-- pagina5.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página 5</title>
+    <style>
+        * { font-family: Arial; margin: 0; padding: 0; }
+        body { padding: 20px; background: #f0f0f0; }
+        nav { background: #333; padding: 15px; margin-bottom: 20px; }
+        nav a { color: white; text-decoration: none; margin: 0 10px; }
+        nav a:hover { color: #c7ceea; }
+        .active { color: #c7ceea !important; font-weight: bold; }
+        h1 { color: #333; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="active">Inicio</a>
+        <a href="pagina1.html">pagina1</a>
+        <a href="pagina2.html">Página2</a>
+        <a href="pagina3.html">Página3</a>
+        <a href="pagina4.html">Página4</a>
+        <a href="pagina5.html">pagina5</a>
+        <a href="pagina6.html">Página6</a>
+        <a href="pagina7.html">Página7</a>
+        <a href="pagina8.html">Página8</a>
+    </nav>
+    <h1>Página 5</h1>
+    <p>Contenido de la página 5.</p>
+</body>
+</html>
+<head>
+    <meta charset="UTF-8">
+    <title>Página 5</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="pagina5">
+    </head>
+
+
+    <body>
+   
+    <a href="index.html">← Volver al menú</a>
+</body>
+</html>
+
+
+<!-- pagina5.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    
+    <style>
+        * { margin: 0; padding: 0; font-family: Arial; }
+        body { padding: 20px; background: #f39c12; color: white; min-height: 100vh; }
+        a { color: white; display: block; margin-bottom: 20px; }
+        input { padding: 10px; width: 300px; }
+        button { padding: 10px 20px; cursor: pointer; }
+        #resultado { margin-top: 20px; padding: 15px; background: rgba(255,255,255,0.2); }
+    </style>
+</head>
+<body>
+    
+    <h1>Buscador</h1>
+    
+    <input type="text" id="buscar" placeholder="Buscar...">
+    <button onclick="buscar()">Buscar</button>
+    
+    <div id="resultado"></div>
+
+    <script>
+        const paginas = ['index.html', 'pagina1.html', 'pagina2.html', 'pagina3.html', 'pagina4.html', 'pagina5.html', 'pagina6.html', 'pagina7.html', 'pagina8.html', 'pagina9.html'];
+        
+        async function buscar() {
+            const texto = document.getElementById('buscar').value.toLowerCase();
+            const resultado = document.getElementById('resultado');
+            resultado.innerHTML = 'Buscando...';
+            
+            let hallado = '';
+            
+            for (let pag of paginas) {
+                try {
+                    const res = await fetch(pag);
+                    const html = await res.text();
+                    if (html.toLowerCase().includes(texto)) {
+                        hallado += `<p>✓ Encontrado en: <a href="${pag}" style="color:white">${pag}</a></p>`;
+                    }
+                } catch(e) {}
+            }
+            
+            resultado.innerHTML = hallado || 'No se encontraron coincidencias';
+        }
+    </script>
+</body>
+</html>

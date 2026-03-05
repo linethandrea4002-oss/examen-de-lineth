@@ -1,0 +1,64 @@
+<!-- pagina4.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página 4</title>
+    <style>
+        * { font-family: Arial; margin: 0; padding: 0; }
+        body { padding: 20px; background: #f0f0f0; }
+        nav { background: #333; padding: 15px; margin-bottom: 20px; }
+        nav a { color: white; text-decoration: none; margin: 0 10px; }
+        nav a:hover { color: #a8e6cf; }
+        .active { color: #a8e6cf !important; font-weight: bold; }
+        h1 { color: #333; }
+    </style>
+</head>
+<body>
+    <nav>
+         <a href="index.html" class="active">Inicio</a>
+        <a href="pagina1.html">pagina1</a>
+        <a href="pagina2.html">Página2</a>
+        <a href="pagina3.html">Página3</a>
+        <a href="pagina4.html">Página4</a>
+        <a href="pagina5.html">pagina5</a>
+        <a href="pagina6.html">Página6</a>
+        <a href="pagina7.html">Página7</a>
+        <a href="pagina8.html">Página8</a>
+    </nav>
+    <h1>Página 4</h1>
+    <p>Contenido de la página 4.</p>
+</body>
+</html>
+<head>
+    <meta charset="UTF-8">
+    <title>Página 4</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="pagina4">
+
+    </head>
+<body>
+    <h1>Página 4</h1>
+    <a href="index.html">← Volver al menú</a>
+</body>
+</html>
+
+
+<div id="texto">
+        La tecnología ha transformado radicalmente nuestra sociedad contemporánea de maneras impensables hace apenas unas décadas. Los avances científicos permiten hoy comunicarnos instantáneamente con personas ubicadas en cualquier rincón del planeta Tierra. Internet constituye sin duda alguna una revolución comparable con la invención de la imprenta o la electricidad. Los smartphones se han convertido en extensiones digitales de nuestras propias manos. La inteligencia artificial promete redefinir completamente múltiples industrias laborales. Los vehículos autónomos circularán próximamente por nuestras carreteras urbanas. La medicina personalizada utiliza algoritmos complejos para diagnosticar enfermedades raras. Los satélites artificiales orbitan constantemente observando fenómenos climáticos extremos. Las energías renovables representan esperanza frente al cambio climático global. Los océanos contienen secretos biológicos aún por descubrir completamente. La biodiversidad terrestre enfrenta amenazas sin precedentes históricos recientes. Los bosques tropicales desaparecen alarmantemente cada año calendario. Las abejas polinizadoras están desapareciendo misteriosamente en diversos continentes. Los glaciares antárticos se derriten aceleradamente debido temperaturas elevadas. Los científicos investigan desesperadamente soluciones viables sostenibles ambientalmente. Los gobiernos internacionales negocian acuerdos vinculantes urgentemente necesarios. Los jóvenes activistas exigen acciones concretas inmediatas efectivas. Las comunidades indígenas protegen sabiduría ancestral milenaria valiosísima. Los idiomas minoritarios desaparecen silenciosamente para siempre eternamente. Las tradiciones culturales evolucionan inevitablemente adaptándose tiempos modernos actuales. Los museos preservan objetos históricos testimonios civilizaciones pasadas extintas. Los arqueólogos descubren ruinas antiguas bajo tierra profunda ocultas. Los astronautas exploran espacio sideral buscando respuestas fundamentales existenciales. Los telescopios detectan exoplanetas potencialmente habitables lejanos distantes. Los robots exploran Marte enviando datos científicos valiosos importantes. Los ingenieros diseñan ciudades inteligentes sostenibles ecológicamente responsables. Los arquitectos crean edificios imposibles imaginados anteriormente antes. Los artistas expresan emociones profundas mediante diversas técnicas creativas. Los músicos componen melodías trascienden fronteras culturales nacionales lingüísticas. Los escritores narran historias universales conectan humanidad entera completa. Los poetas juegan palabras creando belleza estética única irrepetible. Los pintores capturan luz momentos efímeros permanentes eternos. Los escultores moldean materiales duros formas orgánicas fluídas. Los bailarines comunican sentimientos corporales movimientos expresivos elegantes. Los atletas superan límites físicos mentales disciplina entrenamiento constante. Los entrenadores motivan equipos lograr objetivos ambiciosos difíciles. Los médicos salvan vidas humanas dedicación profesional inquebrantable absoluta. Los enfermeros cuidan pacientes vulnerables compasión empatía genuina. Los profesores educan generaciones futuras conocimiento valores éticos. Los estudiantes adquieren habilidades necesarias desarrollarse personalmente profesionalmente. Los investigadores buscan verdades ocultas naturaleza universo infinito.
+    </div>
+
+    <script>
+        function mostrar(input, tipo) {
+            const file = input.files[0];
+            if (file) {
+                const url = URL.createObjectURL(file);
+                const elem = document.getElementById(tipo);
+                elem.src = url;
+                if (tipo === 'img') elem.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!-- index.html (Página 1 - Inicio) -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * { font-family: Arial; margin: 0; padding: 0; }
+        body { padding: 20px; background: #f0f0f0; }
+        nav { background: #333; padding: 15px; margin-bottom: 20px; }
+        nav a { color: white; text-decoration: none; margin: 0 10px; }
+        nav a:hover { color: #ff6b6b; }
+        .active { color: #ff6b6b !important; font-weight: bold; }
+        h1 { color: #333; }
+    </style>
+</head>
+<body>
+    <nav>
+         <a href="index.html" class="active">Inicio</a>
+        <a href="pagina1.html">pagina1</a>
+        <a href="pagina2.html">Página2</a>
+        <a href="pagina3.html">Página3</a>
+        <a href="pagina4.html">Página4</a>
+        <a href="pagina5.html">pagina5</a>
+        <a href="pagina6.html">Página6</a>
+        <a href="pagina7.html">Página7</a>
+        <a href="pagina8.html">Página8</a>
+    </nav>
+    <h1>Página 1 - Inicio</h1>
+    <p>Bienvenido a la página 1.</p>
+</body>
+</html>
+<head>
+    <meta charset="UTF-8">
+    <title>Página 1</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="pagina1">
+
+   
+</head>
+<body>
+    <h1>Página 1</h1>
+    <a href="index.html">← Volver al menú</a>
+</body>
+</html>
+
+
+
+<!-- pagina2.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    
+    <style>
+        * { margin: 0; padding: 0; font-family: Arial; }
+        body { padding: 20px; background: #3498db; color: white; min-height: 100vh; }
+        a { color: white; display: block; margin-bottom: 20px; }
+        input { display: block; margin: 10px 0; padding: 10px; width: 300px; }
+        button { padding: 10px 20px; cursor: pointer; }
+        #contenido { margin-top: 20px; padding: 15px; background: rgba(255,255,255,0.2); white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+    
+    
+    
+    <input type="email" id="mail" placeholder="Email">
+    <input type="password" id="pass" placeholder="Password">
+    <input type="file" id="archivo" accept=".txt">
+    <button onclick="cargar()">Cargar</button>
+    
+    <div id="contenido"></div>
+
+    <script>
+        function cargar() {
+            const file = document.getElementById('archivo').files[0];
+            if (!file) return alert('Selecciona un archivo');
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const texto = e.target.result;
+                console.log(texto);
+                document.getElementById('contenido').textContent = texto;
+            };
+            reader.readAsText(file);
+        }
+    </script>
+</body>
+</html>

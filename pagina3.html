@@ -1,0 +1,75 @@
+<!-- pagina3.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página 3</title>
+    <style>
+        * { font-family: Arial; margin: 0; padding: 0; }
+        body { padding: 20px; background: #f0f0f0; }
+        nav { background: #333; padding: 15px; margin-bottom: 20px; }
+        nav a { color: white; text-decoration: none; margin: 0 10px; }
+        nav a:hover { color: #ffe66d; }
+        .active { color: #ffe66d !important; font-weight: bold; }
+        h1 { color: #333; }
+    </style>
+</head>
+<body>
+    <nav>
+       <a href="index.html" class="active">Inicio</a>
+        <a href="pagina1.html">pagina1</a>
+        <a href="pagina2.html">Página2</a>
+        <a href="pagina3.html">Página3</a>
+        <a href="pagina4.html">Página4</a>
+        <a href="pagina5.html">pagina5</a>
+        <a href="pagina6.html">Página6</a>
+        <a href="pagina7.html">Página7</a>
+        <a href="pagina8.html">Página8</a>
+    </nav>
+    <h1>Página 3</h1>
+    <p>Contenido de la página 3.</p>
+</body>
+</html>
+<head>
+    <meta charset="UTF-8">
+    <title>Página 3</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="pagina3">
+
+    </head>
+<body>
+    <h1>Página 3</h1>
+    <a href="index.html">← Volver al menú</a>
+</body>
+</html>
+
+</head>
+<body>
+    
+    
+    <input type="color" id="color" onchange="document.getElementById('colorBox').style.background=this.value">
+    <div id="colorBox"></div>
+    
+    <input type="file" accept="image/*" onchange="mostrar(this, 'img')">
+    <img id="img">
+    
+    <input type="file" accept="audio/*" onchange="mostrar(this, 'audio')">
+    <audio id="audio" controls></audio>
+    
+    <input type="file" accept="video/*" onchange="mostrar(this, 'video')">
+    <video id="video" controls width="300"></video>
+
+    <script>
+        function mostrar(input, tipo) {
+            const file = input.files[0];
+            if (file) {
+                const url = URL.createObjectURL(file);
+                const elem = document.getElementById(tipo);
+                elem.src = url;
+                if (tipo === 'img') elem.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
